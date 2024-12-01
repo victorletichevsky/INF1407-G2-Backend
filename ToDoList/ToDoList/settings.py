@@ -42,11 +42,12 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'tasks',
+    'rest_framework.authtoken',
 ]
 
 REST_FRAMEWORK = {
-    'DEFAULT_SCHEMA_CLASS':
-    'rest_framework.schemas.coreapi.AutoSchema'
+    'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+    'DEFAULT_AUTHENTICATION_CLASSES': ['rest_framework.authentication.TokenAuthentication']
 }
 
 MIDDLEWARE = [
